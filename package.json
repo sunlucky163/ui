@@ -1,0 +1,55 @@
+{
+    "scripts": {
+        "jest": "node --expose-gc ./node_modules/.bin/jest --forceExit --logHeapUsage",
+        "testRun": "yarn test || yarn test --onlyFailures",
+        "test": "yarn jest --expand --maxWorkers=3 --config ./config/base/jest.config.js --ci",
+        "eslint": "eslint ./config ./src ./tests --color --ext .ts",
+        "eslint-fix": "eslint ./config ./src ./tests --color --ext .ts --fix",
+        "prettier": "prettier '**/**.ts' --ignore-path ./.prettierignore --write",
+        "lint-stage": "yarn eslint --quiet"
+    },
+    "dependencies": {
+        "@types/jest": "^24.0.18",
+        "@types/node": "^12.7.2",
+        "@types/puppeteer": "^1.19.1",
+        "@typescript-eslint/eslint-plugin": "^2.0.0",
+        "@typescript-eslint/parser": "^2.0.0",
+        "@sora-substrate/util": "1.6.28",
+        "axios": "^0.21.1",
+        "cookie": "^0.4.0",
+        "eslint": "^6.2.1",
+        "eslint-config-prettier": "^6.1.0",
+        "eslint-plugin-eslint-comments": "^3.1.2",
+        "eslint-plugin-eslint-plugin": "^2.1.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^23.0.4",
+        "eslint-plugin-prettier": "^3.1.0",
+        "faker": "^4.1.0",
+        "https": "^1.0.0",
+        "jest": "26.6.1",
+        "jest-image-snapshot": "^4.5.1",
+        "nanoid": "^3.1.25",
+        "numeral": "^2.0.6",
+        "p-iteration": "^1.1.8",
+        "parse-url": "^5.0.1",
+        "prettier": "^1.18.2",
+        "puppeteer": "^1.19.0",
+        "querystring": "^0.2.0",
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.5.3",
+        "url-parse": "^1.5.2",
+        "wait-for-expect": "^2.0.0"
+    },
+    "jest": {
+        "setupFilesAfterEnv": [
+            "/jest-setup.js"
+        ]
+    },
+    "keywords": [
+        "jest-image-snapshot",
+        "examples"
+    ],
+    "devDependencies": {
+        "@types/jest-image-snapshot": "^4.3.1"
+    }
+}
