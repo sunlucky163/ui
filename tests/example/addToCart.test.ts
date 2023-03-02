@@ -19,7 +19,7 @@ describe('Add items to cart ', () => {
 
     test('should be success', async () => {
         await productPage.open();
-        const mainContext = await productPage.getContext();
+        const mainContext = await productPage.getSidebar();
         await mainContext.addToCart();
         expect(await mainContext.addToCartCheck()).toBe(true);
     }, 50000);

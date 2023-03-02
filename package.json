@@ -1,6 +1,5 @@
 {
     "scripts": {
-        "jest": "node --expose-gc ./node_modules/.bin/jest --forceExit --logHeapUsage",
         "testRun": "yarn test || yarn test --onlyFailures",
         "test": "yarn jest --expand --maxWorkers=3 --config ./config/base/jest.config.js --ci",
         "eslint": "eslint ./config ./src ./tests --color --ext .ts",
