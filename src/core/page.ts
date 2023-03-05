@@ -77,11 +77,6 @@ export class Page {
         return await this.$x(selector);
     }
 
-    async type(text: string): Promise<void> {
-        await this.element.focus();
-        await this.element.type(text);
-    }
-
     getInstance(): puppeteer.Page {
         return this.page;
     }
